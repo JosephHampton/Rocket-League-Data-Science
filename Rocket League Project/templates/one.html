@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1v1 Leaderboard</title>
+<style>
+table {
+    font-size: 30px;
+    font-family: monospace;
+    border-radius: 20px;
+    width:  65%;
+    color: #19181d;
+    letter-spacing: 5px;
+}
+</style>
+</head>
+
+<body>
+
+{% include "index.html" %}
+<div class="table" name="1v1" align="center">
+{% for table in tables %}
+            {{titles[loop.index]}}
+            {{ table|safe }}
+{% endfor %}
+</div>
+</body>
+</html>
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3v3 Leaderboard</title>
+    <style>
+    table {
+    font-size: 30px;
+    font-family: monospace;
+    width: 65%;
+    letter-spacing: 5px;
+    }
+    </style>
+</head>
+<body>
+
+{% include "index.html" %}
+<div class='table' align="center">
+{% for table in tables %}
+            {{titles[loop.index]}}
+            {{ table|safe }}
+{% endfor %}
+</div>
+</body>
+</html>

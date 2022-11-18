@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rocket League Data Science Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="{{ url_for('static', filename='style.css')}}" rel="stylesheet">
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+      body {
+        background-color: gray;
+      }
+    .carousel-inner { width:100%; height:918px;}
+    .carousel-item img{ width:100%; height:918px; object-fit: cover;}
+    .navbar {
+            background-color: black;
+      position: absolute;
+      z-index: 9;
+      width: 100%;
+
+        }
+
+        .nav-item {
+            font-family: monospace;
+            font-size: 18px !important;
+            font-weight: normal;
+            padding-left:30px;
+            padding-right:30px;
+            text-align: left;
+        }
+        .navbar-nav>li>a {
+            color : white;
+        }
+        a:hover {
+            color: darkorange !important;
+        }
+
+    </style>
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Navigation -->
+
+<nav class="navbar navbar-expand-lg navbar-dark>
+  <a class="navbar-brand" href="#"><img src="/static/RLDS3.png" width = 150 height = 50></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/About">About Me</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/1v1Leaderboard">1v1 Leaderboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/2v2Leaderboard">2v2 Leaderboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/3v3Leaderboard">3v3 Leaderboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Population">Population Stats</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Projects">Data Science Projects</a>
+      </li>
+    </ul>
+
+    <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search"
+        placeholder="Find Projects" aria-label="Find Projects">
+        <button class="btn btn-light my-sm-0" type="submit">
+        Go</button>
+  </div>
+</nav>
+<!--- Image Slider -->
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/static/Carousel1.png" alt="RLDS" width="100%">
+    </div>
+    <div class="carousel-item">
+      <img src="/static/Carousel2.png" alt="Leaderboards" width="100%">
+    </div>
+    <div class="carousel-item">
+      <img src="/static/Carousel3.png" alt="Data Projects" width="100%">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+</body>
+</html>

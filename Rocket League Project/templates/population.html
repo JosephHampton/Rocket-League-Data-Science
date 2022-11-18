@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Population Stats</title>
+    <style>
+    table {
+    font-size: 30px;
+    font-family: monospace;
+    padding-bottom: 100px;
+    }
+</style>
+</head>
+<body>
+
+{% include "index.html" %}
+<div class='table' align="center">
+{% for table in tables %}
+            {{titles[loop.index]}}
+            {{ table|safe }}
+{% endfor %}
+</div>
+</body>
+</html>
